@@ -13,3 +13,7 @@ provider:
 functions:
   hello:
     handler: handler.hello
+
+
+plugins:
+  - serverless-python-requirements

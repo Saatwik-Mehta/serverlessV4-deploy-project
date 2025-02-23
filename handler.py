@@ -1,5 +1,5 @@
 import json
-
+import requests
 
 def hello(event, context):
     body = {
