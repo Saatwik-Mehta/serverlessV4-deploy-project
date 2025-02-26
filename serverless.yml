@@ -10,10 +10,13 @@ provider:
   runtime: python3.12
   region: ap-south-1
 
+layers: ${file(./layers.yml)}
+
 functions:
   hello:
     handler: handler.hello
-
+    layers:
+      - { Ref: UtilsLambdaLayer }
 
 plugins:
   - serverless-python-requirements
